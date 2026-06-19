@@ -19,8 +19,8 @@ export const brand = {
   shortStatement:
     "Kanara Wedding Organizer membantu pasangan mewujudkan pengalaman pernikahan yang tenang, elegan, dan bermakna — dari konsultasi awal hingga akhir perayaan.",
   email: "hello@kanarawedding.com",
-  whatsapp: "+6281234567890",
-  whatsappDisplay: "+62 812-3456-7890",
+  whatsapp: "+6282249321965",
+  whatsappDisplay: "0822-4932-1965",
   instagram: "@kanarawedding",
   instagramUrl: "https://instagram.com/kanarawedding",
   whatsappMessage: "Halo Kanara Wedding! Saya tertarik untuk mendiskusikan rencana pernikahan saya dan ingin menjadwalkan konsultasi. Boleh mohon info lebih lanjut mengenai layanan yang tersedia? Terima kasih.",
