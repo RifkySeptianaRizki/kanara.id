@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { hero } from "../../data/siteData";
+import { hero, brand } from "../../data/siteData";
 import { scrollToSection } from "../../lib/utils";
 import Button from "../ui/Button";
 import Reveal from "../ui/Reveal";
@@ -9,13 +9,13 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const SynchronizedAnimatedWords = () => {
-  const [tick, setTick] = useState(0); // 0 to 12
+  const [tick, setTick] = useState(0); // 0 to 14
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     let timeout;
     if (!isDeleting) {
-      if (tick < 12) {
+      if (tick < 14) {
         timeout = setTimeout(() => setTick((t) => t + 1), 200); // Slower typing speed
       } else {
         timeout = setTimeout(() => setIsDeleting(true), 4000); // Pause when fully typed
@@ -30,11 +30,11 @@ const SynchronizedAnimatedWords = () => {
     return () => clearTimeout(timeout);
   }, [tick, isDeleting]);
 
-  const word1 = "Tenang";
-  const word2 = "Elegan";
+  const word1 = "Creates";
+  const word2 = "Meaning";
   
-  const length1 = Math.min(tick, 6);
-  const length2 = Math.max(0, tick - 6);
+  const length1 = Math.min(tick, 7);
+  const length2 = Math.max(0, tick - 7);
 
   return (
     <>
@@ -47,7 +47,7 @@ const SynchronizedAnimatedWords = () => {
           ))}
         </span>
         {/* Show cursor on word1 if typing/deleting word1 */}
-        {(tick < 6 || (isDeleting && tick <= 6 && tick > 0)) && (
+        {(tick < 7 || (isDeleting && tick <= 7 && tick > 0)) && (
           <span 
             className="animate-pulse w-[3px] h-[0.9em] bg-[#C8A96A] absolute" 
             style={{ left: `calc(${(length1 / word1.length) * 100}% + 2px)` }}
@@ -56,7 +56,7 @@ const SynchronizedAnimatedWords = () => {
       </span>
       {" "}
       <br className="hidden sm:block" /> 
-      dan{" "}
+      {" "}
       <span className="italic text-[#C8A96A] inline-flex items-center relative">
         <span>
           {word2.split("").map((char, index) => (
@@ -66,7 +66,7 @@ const SynchronizedAnimatedWords = () => {
           ))}
         </span>
         {/* Show cursor on word2 if typing/deleting word2 */}
-        {(tick >= 6 && tick <= 12) && (
+        {(tick >= 7 && tick <= 14) && (
           <span 
             className="animate-pulse w-[3px] h-[0.9em] bg-[#C8A96A] absolute" 
             style={{ left: `calc(${(length2 / word2.length) * 100}% + 2px)` }}
@@ -99,7 +99,7 @@ export default function Hero() {
       <div className="relative z-20 flex w-full max-w-4xl flex-col items-center text-center">
         <Reveal delay={0.2}>
           <h1 className="mb-6 font-serif text-5xl leading-[1.2] text-[#F7F2E8] sm:text-6xl lg:text-7xl drop-shadow-lg">
-            Pernikahan yang <SynchronizedAnimatedWords />
+            Perspective That <SynchronizedAnimatedWords />
           </h1>
         </Reveal>
 
@@ -112,7 +112,7 @@ export default function Hero() {
         <Reveal delay={0.4}>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <button
-              onClick={() => scrollToSection("contact")}
+              onClick={() => window.open(`https://wa.me/${brand.whatsapp.replace(/\+/g, '')}?text=${encodeURIComponent(brand.whatsappMessage)}`, "_blank")}
               className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-[#C8A96A] to-[#BFA77A] px-6 py-2.5 text-sm font-medium text-[#050505] transition-all hover:scale-105"
             >
               <span className="absolute inset-0 bg-white/20 opacity-0 transition-opacity group-hover:opacity-100" />

@@ -15,7 +15,7 @@ export default function CTA() {
           {/* Huge Title */}
           <Reveal>
             <h2 className="font-serif text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5.5rem] font-medium text-[#F7F2E8] tracking-tight leading-[1.1] text-justify w-full">
-              Mari <span className="text-[#C8A96A] italic">Ciptakan</span> Hari Pernikahan yang <span className="text-[#C8A96A] italic">Tenang</span>, <span className="text-[#C8A96A] italic">Elegan</span>, dan Benar-benar <span className="text-[#C8A96A] italic">Mencerminkan Anda.</span>
+              Kami percaya karya <span className="text-[#C8A96A] italic">terbaik</span> lahir dari <span className="text-[#C8A96A] italic">kolaborasi</span>, <span className="text-[#C8A96A] italic">kepercayaan</span>, dan pemahaman <span className="text-[#C8A96A] italic">mendalam</span> antara tim dan klien
             </h2>
           </Reveal>
         </div>

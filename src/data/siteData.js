@@ -23,6 +23,7 @@ export const brand = {
   whatsappDisplay: "+62 812-3456-7890",
   instagram: "@kanarawedding",
   instagramUrl: "https://instagram.com/kanarawedding",
+  whatsappMessage: "Halo Kanara Wedding! Saya tertarik untuk mendiskusikan rencana pernikahan saya dan ingin menjadwalkan konsultasi. Boleh mohon info lebih lanjut mengenai layanan yang tersedia? Terima kasih.",
   copyright: `© ${new Date().getFullYear()} Kanara Wedding. All rights reserved.`,
 };
 
@@ -34,14 +35,13 @@ export const navLinks = [
   { label: "Paket", href: "packages" },
   { label: "Galeri", href: "gallery" },
   { label: "FAQ", href: "faq" },
-  { label: "Kontak", href: "contact" },
 ];
 
 export const hero = {
   label: "Wedding Organizer & Event Planning",
   headline: "Pengalaman Pernikahan yang Tenang dan Elegan, Dirancang dari Cerita Anda",
   subheadline:
-    "Mewujudkan pernikahan Anda dengan detail tertata, estetika elegan, dan eksekusi sempurna.",
+    "To see is to understand the human story",
   ctaPrimary: "Jadwalkan Konsultasi",
   ctaSecondary: "Lihat Layanan",
 };
@@ -76,9 +76,9 @@ export const values = [
 export const about = {
   headline: "Partner Anda dalam Mewujudkan Perayaan yang Bermakna",
   paragraphs: [
-    "Kanara Wedding Organizer hadir dari sebuah keyakinan sederhana: setiap pasangan berhak mendapatkan pernikahan yang benar-benar mencerminkan diri mereka — tenang, elegan, dan bermakna.",
-    "Kami bukan sekadar organizer yang mengurus hal teknis. Kami adalah partner Anda dalam menerjemahkan cerita, karakter, dan impian Anda menjadi sebuah perayaan yang tertata indah dan sangat personal.",
-    "Mulai dari perencanaan yang matang, koordinasi yang teratur, hingga eksekusi yang mendetail, pendekatan kami selalu berpusat pada Anda. Kami menangani segala kerumitannya, sehingga Anda bisa hadir seutuhnya di setiap momen berharga.",
+    "Kanara adalah creative agency yang berfokus pada strategic perspective, human-centered design, dan meaningful storytelling.",
+    "Kami tidak hanya membuat visual atau konten. Kami membantu brand menemukan cara pandang yang tepat untuk menyampaikan pesan mereka secara lebih kuat, relevan, dan berkesan.",
+    "Nama Kanara terinspirasi dari kata Sanskerta: Kāna (mata) + Nara (manusia) yang secara simbolik menggambarkan cara manusia melihat dunia"
   ],
   highlights: [
     "Pendekatan personal untuk setiap pasangan",
@@ -158,73 +158,62 @@ export const process = [
     description:
       "Mengelola alur acara keseluruhan, memastikan vendor siap, keluarga terkoordinasi, dan setiap momen berjalan dengan tenang.",
   },
-  {
-    step: "05",
-    title: "Penutupan & Evaluasi",
-    description:
-      "Menutup rangkaian perayaan dengan elegan, menyelesaikan kebutuhan akhir, dan memberikan laporan evaluasi singkat jika diperlukan.",
-  },
+
 ];
 
 export const packages = [
   {
-    title: "Essential Coordination",
+    title: "Essential Elegance",
     description:
-      "Untuk pasangan yang sudah memiliki konsep dan vendor, tetapi membutuhkan koordinasi profesional di hari pernikahan.",
+      "Layanan dasar untuk memastikan kelancaran acara Anda dengan koordinasi yang esensial.",
     features: [
-      "Koordinasi hari H",
-      "Penyelarasan vendor di hari H",
-      "Manajemen rundown",
-      "Briefing keluarga",
-      "Dukungan tim on-site",
+      { title: "Crew 4 Orang", description: "Terdiri dari 1 Project Officer, 1 Bride Assistant, dan 2 Field Coordinator." },
+      { title: "1x Meeting Vendor dan Keluarga", description: "Koordinasi teknis menyeluruh sebelum hari H bersama seluruh vendor dan perwakilan keluarga." },
+      { title: "Free Balon", description: "Pelepasan balon helium saat prosesi (10-15 pcs)." },
+      { title: "Free Convety", description: "Confetti popper untuk momen selebrasi (2 pcs)." },
+      { title: "Buku Tamu", description: "2 buah buku tamu eksklusif dengan desain elegan." },
+      { title: "Free Alat Bantaian", description: "Peminjaman set alat bantaian/saweran lengkap." },
     ],
-    price: "Rp 15.000.000",
-    cta: "Minta Penawaran",
+    price: "Rp 2.699.000",
+    cta: "Pilih Paket",
     highlighted: false,
   },
   {
-    title: "Signature Wedding",
+    title: "Timeless Signature",
     description:
-      "Untuk pasangan yang membutuhkan perencanaan dan koordinasi menyeluruh — dari konsep hingga hari perayaan.",
+      "Paket komprehensif dengan perencanaan mendetail dan kelengkapan tradisi eksklusif.",
     features: [
-      "Perencanaan & konsep menyeluruh",
-      "Rekomendasi & koordinasi vendor",
-      "Panduan timeline & budget",
-      "Manajemen technical meeting",
-      "Koordinasi penuh hari H",
+      { title: "Crew 6 Orang", description: "Terdiri dari 1 Project Officer, 1 Bride Assistant, 1 Groom Assistant, 1 Family Assistant, dan 2 Field Coordinator." },
+      { title: "2x Konsultasi Wedding", description: "Sesi diskusi mendalam untuk menyusun konsep acara, budgeting, hingga pembuatan rundown." },
+      { title: "1x Meeting Vendor dan Keluarga", description: "Rapat koordinasi akhir bersama vendor dan perwakilan keluarga untuk menyelaraskan teknis hari H." },
+      { title: "Spreadsheets Planner", description: "Akses eksklusif ke dokumen kerja (Guest List, Budget Tracker, Rundown) yang terstruktur." },
+      { title: "Free Balon", description: "Pelepasan balon helium saat prosesi (10-15 pcs)." },
+      { title: "Free Convety", description: "Confetti popper untuk momen selebrasi (2 pcs)." },
+      { title: "Buku Tamu", description: "2 buah buku tamu eksklusif dengan desain elegan." },
+      { title: "Free Alat Bantaian", description: "Peminjaman set alat bantaian/saweran lengkap." },
+      { title: "Free Bakakak dan Nasi Punar", description: "Disediakan khusus untuk kebutuhan prosesi adat Sunda (Huap Lingkung / Pabetot Bakakak)." },
+      { title: "Welcome Sign", description: "Papan sambutan tamu eksklusif di area masuk." },
     ],
-    price: "Rp 35.000.000",
-    cta: "Minta Penawaran",
+    price: "Rp 4.399.000",
+    cta: "Pilih Paket",
     highlighted: true,
   },
   {
-    title: "Intimate Celebration",
+    title: "Classic Harmony",
     description:
-      "Untuk intimate wedding, lamaran, atau acara keluarga yang simpel, hangat, dan elegan.",
+      "Pilihan menengah dengan tambahan konsultasi dan dekorasi sambutan untuk tamu.",
     features: [
-      "Perencanaan intimate event",
-      "Panduan venue & styling",
-      "Koordinasi vendor",
-      "Manajemen hari H",
-      "Sentuhan & detail personal",
+      { title: "Crew 5 Orang", description: "Terdiri dari 1 Project Officer, 1 Bride Assistant, 1 Groom Assistant, dan 2 Field Coordinator." },
+      { title: "1x Konsultasi Wedding", description: "Sesi diskusi untuk menyusun garis besar acara dan membantu pembuatan rundown." },
+      { title: "1x Meeting Vendor dan Keluarga", description: "Rapat koordinasi teknis bersama vendor terkait sebelum hari H." },
+      { title: "Free Balon", description: "Pelepasan balon helium saat prosesi (10-15 pcs)." },
+      { title: "Free Convety", description: "Confetti popper untuk momen selebrasi (2 pcs)." },
+      { title: "Buku Tamu", description: "2 buah buku tamu eksklusif dengan desain elegan." },
+      { title: "Free Alat Bantaian", description: "Peminjaman set alat bantaian/saweran lengkap." },
+      { title: "Welcome Sign", description: "Papan sambutan tamu eksklusif di area masuk." },
     ],
-    price: "Rp 25.000.000",
-    cta: "Minta Penawaran",
-    highlighted: false,
-  },
-  {
-    title: "Custom Experience",
-    description:
-      "Untuk kebutuhan khusus — acara multi-hari, destination wedding, atau perayaan dengan skala yang lebih kompleks.",
-    features: [
-      "Cakupan perencanaan khusus",
-      "Manajemen acara multi-hari",
-      "Dukungan destination wedding",
-      "Koordinasi lanjutan",
-      "Tim project khusus",
-    ],
-    price: "Tersedia sesuai permintaan",
-    cta: "Minta Proposal",
+    price: "Rp 3.399.000",
+    cta: "Pilih Paket",
     highlighted: false,
   },
 ];
@@ -310,7 +299,7 @@ export const faq = [
 
 export const ctaSection = {
   headline:
-    "Mari Ciptakan Hari Pernikahan yang Tenang, Elegan, dan Benar-benar Mencerminkan Anda.",
+    "Kami percaya karya terbaik lahir dari kolaborasi, kepercayaan, dan pemahaman mendalam antara tim dan klien",
   subheadline:
     "Ceritakan kisah Anda, tanggal yang dipilih, dan suasana impian Anda. Kami akan membantu merangkai perayaan dengan perencanaan matang dan koordinasi yang mulus.",
   ctaPrimary: "Jadwalkan Konsultasi",

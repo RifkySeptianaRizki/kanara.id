@@ -9,8 +9,6 @@ import Packages from "./components/sections/Packages";
 import Gallery from "./components/sections/Gallery";
 import FAQ from "./components/sections/FAQ";
 import CTA from "./components/sections/CTA";
-import Contact from "./components/sections/Contact";
-
 export default function App() {
   return (
     <div className="min-h-screen bg-[#050505] text-[#F7F2E8] antialiased">
@@ -24,7 +22,6 @@ export default function App() {
         <Gallery />
         <FAQ />
         <CTA />
-        <Contact />
       </main>
       <Footer />
     </div>

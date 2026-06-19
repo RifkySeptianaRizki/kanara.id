@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { gallery } from "../../data/siteData";
 import Reveal from "../ui/Reveal";
 import { cn } from "../../lib/utils";
@@ -12,6 +13,8 @@ const scatterStyles = [
 ];
 
 export default function Gallery() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
   return (
     <section id="gallery" className="relative bg-[#050505] min-h-screen pt-8 pb-24 md:pt-16 md:pb-32 overflow-hidden flex flex-col justify-center">
       
@@ -52,10 +55,14 @@ export default function Gallery() {
         <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-0 md:gap-8 lg:gap-12 mt-24 md:mt-20">
           {gallery.slice(0, 6).map((item, index) => (
             <Reveal key={index} delay={index * 0.1}>
-              <div className={cn(
-                "group relative w-[240px] md:w-[220px] lg:w-[280px] transition-all duration-700 hover:scale-110 hover:z-50 cursor-pointer",
-                scatterStyles[index]
-              )}>
+              <div 
+                className={cn(
+                  "group relative w-[240px] md:w-[220px] lg:w-[280px] transition-all duration-700 hover:scale-110 hover:z-50 cursor-pointer",
+                  scatterStyles[index],
+                  activeIndex === index && "scale-110 z-50"
+                )}
+                onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+              >
                 
                 {/* Photo Print Style */}
                 <div className="bg-[#E5E5E5] p-2 md:p-3 shadow-2xl rounded-3xl">
@@ -63,7 +70,12 @@ export default function Gallery() {
                     <img 
                       src={item.image} 
                       alt={item.title} 
-                      className="absolute inset-0 h-full w-full object-cover filter grayscale contrast-125 transition-all duration-700 group-hover:grayscale-0 group-hover:contrast-100" 
+                      className={cn(
+                        "absolute inset-0 h-full w-full object-cover filter transition-all duration-700",
+                        activeIndex === index 
+                          ? "grayscale-0 contrast-100" 
+                          : "grayscale contrast-125 group-hover:grayscale-0 group-hover:contrast-100"
+                      )} 
                       loading="lazy" 
                     />
                   </div>

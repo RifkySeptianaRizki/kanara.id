@@ -10,6 +10,7 @@ export default function PackageCard({
   cta,
   highlighted,
   index = 0,
+  onOpenModal,
 }) {
   return (
     <div
@@ -54,35 +55,35 @@ export default function PackageCard({
           )}
         </div>
 
-        <button
-          onClick={() => scrollToSection("contact")}
-          className={cn(
-            "mb-8 w-full rounded-2xl py-3.5 text-sm font-semibold transition-all duration-300",
-            highlighted 
-              ? "bg-gradient-to-r from-[#C8A96A] to-[#BFA77A] text-[#050505] hover:opacity-90 shadow-[0_8px_20px_rgba(200,169,106,0.3)]" 
-              : "bg-white/[0.04] text-[#F7F2E8] hover:bg-white/[0.08] border border-white/[0.05]" 
-          )}
-        >
-          {cta}
-        </button>
+          <button
+            onClick={onOpenModal}
+            className={cn(
+              "mb-8 w-full rounded-2xl py-3.5 text-sm font-semibold transition-all duration-300",
+              highlighted 
+                ? "bg-gradient-to-r from-[#C8A96A] to-[#BFA77A] text-[#050505] hover:opacity-90 shadow-[0_8px_20px_rgba(200,169,106,0.3)]" 
+                : "bg-white/[0.04] text-[#F7F2E8] hover:bg-white/[0.08] border border-white/[0.05]" 
+            )}
+          >
+            Lihat Detail
+          </button>
 
-        <div className="w-full h-px bg-white/[0.05] mb-8 relative">
-           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#111111] px-3 text-[9px] text-[#A9A29A]/60 tracking-[0.2em] uppercase whitespace-nowrap">
-             {title} +
-           </div>
+          <div className="w-full h-px bg-white/[0.05] mb-8 relative">
+             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#111111] px-3 text-[9px] text-[#A9A29A]/60 tracking-[0.2em] uppercase whitespace-nowrap">
+               {title} +
+             </div>
+          </div>
+
+          <ul className="flex-1 space-y-4">
+            {features.map((feature, idx) => (
+              <li key={idx} className="flex items-start gap-3 text-sm text-[#A9A29A]">
+                <div className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#C8A96A]/20 border border-[#C8A96A]/30">
+                  <Check size={10} className="text-[#C8A96A]" strokeWidth={3} />
+                </div>
+                <span className="leading-snug">{feature.title}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-
-        <ul className="flex-1 space-y-4">
-          {features.map((feature, idx) => (
-            <li key={idx} className="flex items-start gap-3 text-sm text-[#A9A29A]">
-              <div className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#C8A96A]/20 border border-[#C8A96A]/30">
-                <Check size={10} className="text-[#C8A96A]" strokeWidth={3} />
-              </div>
-              <span className="leading-snug">{feature}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
     </div>
   );
 }

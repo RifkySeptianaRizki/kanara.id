@@ -104,7 +104,7 @@ export default function Navbar() {
             </button>
             <Button
               size="sm"
-              onClick={() => handleNavClick("contact")}
+              onClick={() => window.open(`https://wa.me/${brand.whatsapp.replace(/\+/g, '')}?text=${encodeURIComponent(brand.whatsappMessage)}`, "_blank")}
             >
               Jadwalkan Konsultasi
             </Button>
@@ -163,7 +163,7 @@ export default function Navbar() {
                 transition={{ delay: navLinks.length * 0.05 + 0.1, duration: 0.3 }}
                 className="mt-6"
               >
-                <Button size="lg" onClick={() => handleNavClick("contact")}>
+                <Button size="lg" onClick={() => { setIsOpen(false); window.open(`https://wa.me/${brand.whatsapp.replace(/\+/g, '')}?text=${encodeURIComponent(brand.whatsappMessage)}`, "_blank"); }}>
                   Jadwalkan Konsultasi
                 </Button>
               </motion.div>
